@@ -49,3 +49,5 @@ gem 'bcrypt-ruby'
 gem 'rails-i18n', '~> 4.0.0'
 
 gem 'rails_12factor', group: :production
+
+ruby '2.0.0'
