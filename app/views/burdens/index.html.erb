@@ -1,0 +1,29 @@
+<h1>Listing burdens</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Material</th>
+      <th>Dish</th>
+      <th>Quantity</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @burdens.each do |burden| %>
+      <tr>
+        <td><%= link_to burden.material.name, material_path(burden.material) %></td>
+        <td><%= link_to burden.dish.name, dish_path(burden.dish) %></td>
+        <td><%= burden.quantity %> g</td>
+        <td><%= link_to 'Show', burden %></td>
+        <td><%= link_to 'Edit', edit_burden_path(burden) %></td>
+        <td><%= link_to 'Destroy', burden, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Burden', new_burden_path %>

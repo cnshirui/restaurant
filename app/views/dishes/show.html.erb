@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dish.name %>
+</p>
+
+<p>
+  <strong>Book:</strong>
+  <%= link_to @dish.book.name, book_path(@dish.book) %>
+</p>
+
+<p>
+  <strong>Page:</strong>
+  <%= auto_link @dish.page, :html => { :target => '_blank' } %>
+</p>
+
+<%= link_to 'Edit', edit_dish_path(@dish) %> |
+<%= link_to 'Back', dishes_path %>

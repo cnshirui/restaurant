@@ -1,0 +1,25 @@
+<%= form_for(@meal) do |f| %>
+  <% if @meal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@meal.errors.count, "error") %> prohibited this meal from being saved:</h2>
+
+      <ul>
+      <% @meal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label t('label.date') %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label t('label.type') %><br>
+    <%= f.select :meal_type, Meal::MEAL_TYPES.map { |e| [ t("label.#{e}"), e] }, promot: 'Select a meal' %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

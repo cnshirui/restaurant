@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Restaurant</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  
+<tr>
+  <td><%= link_to t('label.book'), '/books' %></td>
+  <td><%= link_to t('label.dish'), '/dishes' %></td>
+  <td><%= link_to t('label.burden'), '/burdens' %></td>
+  <td><%= link_to t('label.material'), '/materials' %></td>
+  <td><%= link_to t('label.meal'), '/meals' %></td>
+  <td><%= link_to t('label.order'), '/orders' %></td>
+  <% if session[:user_id] %>
+    <td><%= link_to t('label.profile'), user_path(session[:user_id]) %></td>
+    <td><%= link_to t('label.logout'), logout_path, method: :delete %></td>
+  <% else  %>
+    <td><%= link_to t('label.login'), login_path %></td> ( or 
+    <td><%= link_to t('label.register'), register_path %></td> ? )
+  <% end %>
+  
+</tr>  
+
+<%= yield %>
+
+</body>
+</html>
