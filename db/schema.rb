@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140705175623) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "books", force: true do |t|
     t.string   "name"
     t.text     "url"
@@ -28,8 +31,8 @@ ActiveRecord::Schema.define(version: 20140705175623) do
     t.datetime "updated_at"
   end
 
-  add_index "burdens", ["dish_id"], name: "index_burdens_on_dish_id"
-  add_index "burdens", ["material_id"], name: "index_burdens_on_material_id"
+  add_index "burdens", ["dish_id"], name: "index_burdens_on_dish_id", using: :btree
+  add_index "burdens", ["material_id"], name: "index_burdens_on_material_id", using: :btree
 
   create_table "dishes", force: true do |t|
     t.string   "name"
@@ -39,7 +42,7 @@ ActiveRecord::Schema.define(version: 20140705175623) do
     t.text     "page"
   end
 
-  add_index "dishes", ["book_id"], name: "index_dishes_on_book_id"
+  add_index "dishes", ["book_id"], name: "index_dishes_on_book_id", using: :btree
 
   create_table "materials", force: true do |t|
     t.string   "name"
@@ -63,8 +66,8 @@ ActiveRecord::Schema.define(version: 20140705175623) do
     t.datetime "updated_at"
   end
 
-  add_index "orders", ["dish_id"], name: "index_orders_on_dish_id"
-  add_index "orders", ["meal_id"], name: "index_orders_on_meal_id"
+  add_index "orders", ["dish_id"], name: "index_orders_on_dish_id", using: :btree
+  add_index "orders", ["meal_id"], name: "index_orders_on_meal_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name"
