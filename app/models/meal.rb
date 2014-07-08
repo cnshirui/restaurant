@@ -7,13 +7,5 @@ class Meal < ActiveRecord::Base
   
   MEAL_TYPES = ['breakfast', "lunch", "dinner"]
   
-  def name
-    date.to_s + " - " + meal_type
-  end
-  
-  # TODO: overwride
-#  def self.all
-#    self.order :position
-#  end
 end
 

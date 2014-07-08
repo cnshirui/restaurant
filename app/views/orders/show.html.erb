@@ -2,7 +2,7 @@
 
 <p>
   <strong>Meal:</strong>
-  <%= link_to @order.meal.name, meal_path(@order.meal) %>
+  <%= link_to "#{@order.meal.date} - " + t("label." + @order.meal.meal_type), meal_path(@order.meal) %>
 </p>
 
 <p>
