@@ -5,7 +5,7 @@ class MealsController < ApplicationController
   # GET /meals
   # GET /meals.json
   def index
-    @meals = Meal.order :position
+    @meals = Meal.all # order :position
   end
 
   # GET /meals/1

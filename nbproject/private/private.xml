@@ -1,25 +1,49 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/perforce/repos/ruby/restaurant/app/views/users/show.html.erb</file>
+<<<<<<< .mine
+            <file>file:/F:/perforce/repos/ruby/restaurant/app/views/dishes/show.html.erb</file>
+            <file>file:/F:/perforce/repos/ruby/restaurant/app/views/dishes/index.html.erb</file>
+            <file>file:/F:/perforce/repos/ruby/restaurant/app/views/books/index.html.erb</file>
+            <file>file:/F:/perforce/repos/ruby/restaurant/app/views/books/show.html.erb</file>
+            <file>file:/F:/perforce/repos/ruby/restaurant/app/models/user.rb</file>
             <file>file:/F:/perforce/repos/ruby/restaurant/Gemfile</file>
+            <file>file:/F:/perforce/repos/ruby/restaurant/app/views/layouts/application.html.erb</file>
+            <file>file:/F:/perforce/repos/ruby/restaurant/app/controllers/session_controller.rb</file>
+            <file>file:/F:/perforce/repos/ruby/restaurant/app/views/session/new.html.erb</file>
+            <file>file:/F:/perforce/repos/ruby/restaurant/config/routes.rb</file>
+            <file>file:/F:/perforce/repos/ruby/restaurant/app/controllers/application_controller.rb</file>
+            <file>file:/F:/perforce/repos/ruby/restaurant/app/controllers/users_controller.rb</file>
             <file>file:/F:/perforce/repos/ruby/restaurant/app/views/users/new.html.erb</file>
             <file>file:/F:/perforce/repos/ruby/restaurant/app/views/users/_form.html.erb</file>
+            <file>file:/F:/perforce/repos/ruby/restaurant/app/views/users/show.html.erb</file>
             <file>file:/F:/perforce/repos/ruby/restaurant/app/controllers/meals_controller.rb</file>
-            <file>file:/F:/perforce/repos/ruby/restaurant/app/models/user.rb</file>
-            <file>file:/F:/perforce/repos/ruby/restaurant/app/views/books/show.html.erb</file>
-            <file>file:/F:/perforce/repos/ruby/restaurant/app/controllers/users_controller.rb</file>
-            <file>file:/F:/perforce/repos/ruby/restaurant/app/views/dishes/index.html.erb</file>
-            <file>file:/F:/perforce/repos/ruby/restaurant/app/controllers/session_controller.rb</file>
-            <file>file:/F:/perforce/repos/ruby/restaurant/app/controllers/application_controller.rb</file>
-            <file>file:/F:/perforce/repos/ruby/restaurant/config/routes.rb</file>
-            <file>file:/F:/perforce/repos/ruby/restaurant/app/views/dishes/show.html.erb</file>
-            <file>file:/F:/perforce/repos/ruby/restaurant/app/views/books/index.html.erb</file>
-            <file>file:/F:/perforce/repos/ruby/restaurant/app/views/layouts/application.html.erb</file>
-            <file>file:/F:/perforce/repos/ruby/restaurant/app/views/session/new.html.erb</file>
             <file>file:/F:/perforce/repos/ruby/restaurant/test/controllers/users_controller_test.rb</file>
+=======
+            <file>file:/C:/perforce/repos/ruby/restaurant/app/views/materials/index.html.erb</file>
+            <file>file:/C:/perforce/repos/ruby/restaurant/app/controllers/meals_controller.rb</file>
+            <file>file:/C:/perforce/repos/ruby/restaurant/config/database.yml</file>
+            <file>file:/C:/perforce/repos/ruby/restaurant/app/views/meals/show.json.jbuilder</file>
+            <file>file:/C:/perforce/repos/ruby/restaurant/app/views/meals/show.html.erb</file>
+            <file>file:/C:/perforce/repos/ruby/restaurant/app/views/burdens/show.html.erb</file>
+            <file>file:/C:/perforce/repos/ruby/restaurant/app/controllers/orders_controller.rb</file>
+            <file>file:/C:/perforce/repos/ruby/restaurant/app/views/burdens/index.html.erb</file>
+            <file>file:/C:/perforce/repos/ruby/restaurant/db/migrate/20140703174318_add_page_to_dish.rb</file>
+            <file>file:/C:/perforce/repos/ruby/restaurant/app/views/dishes/index.html.erb</file>
+            <file>file:/C:/perforce/repos/ruby/restaurant/app/views/meals/_form.html.erb</file>
+            <file>file:/C:/perforce/repos/ruby/restaurant/app/controllers/dishes_controller.rb</file>
+            <file>file:/C:/perforce/repos/ruby/restaurant/app/views/burdens/edit.html.erb</file>
+            <file>file:/C:/perforce/repos/ruby/restaurant/app/models/meal.rb</file>
+            <file>file:/C:/perforce/repos/ruby/restaurant/db/migrate/20140703183513_fix_column_type_for_meal.rb</file>
+            <file>file:/C:/perforce/repos/ruby/restaurant/db/migrate/20140703172803_create_meals.rb</file>
+            <file>file:/C:/perforce/repos/ruby/restaurant/app/views/burdens/_form.html.erb</file>
+            <file>file:/C:/perforce/repos/ruby/restaurant/app/controllers/burdens_controller.rb</file>
+            <file>file:/C:/perforce/repos/ruby/restaurant/app/views/orders/_form.html.erb</file>
+            <file>file:/C:/perforce/repos/ruby/restaurant/app/views/layouts/application.html.erb</file>
+            <file>file:/C:/perforce/repos/ruby/restaurant/app/views/dishes/show.html.erb</file>
+>>>>>>> .r133
         </group>
     </open-files>
 </project-private>
