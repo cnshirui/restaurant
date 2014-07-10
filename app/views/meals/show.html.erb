@@ -1,14 +1,43 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Date:</strong>
+  <strong><%= t('label.date') %>:</strong>
   <%= @meal.date %>
 </p>
 
 <p>
-  <strong>Type:</strong>
-  <%= @meal.meal_type %>
+  <strong><%= t('type') %>:</strong>
+  <%= t( @meal.meal_type) %>
 </p>
 
-<%= link_to 'Edit', edit_meal_path(@meal) %> |
-<%= link_to 'Back', meals_path %>
+<p>
+  <strong><%= t('order') %>:</strong><br/>
+  <table>
+    <thead>
+      <tr>
+        <th><%= t('name') %></th>
+        <th><%= t('book') %></th>
+        <th><%= t('page') %></th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @meal.orders.each do |order| %>
+        <tr>
+          <td><%= order.dish.name %></td>
+          <td><%= link_to order.dish.book.name, order.dish.book %></td>
+          <td><%= auto_link order.dish.page, :html => { :target => '_blank' } %></td>
+          <td><%= link_to t('show'), order.dish %></td>
+          <td><%= link_to t('edit'), edit_order_path(order) %></td>
+          <td><%= link_to t('destroy'), order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>  
+</p>
+
+
+
+<%= link_to t('edit'), edit_meal_path(@meal) %> |
+<%= link_to t('back'), meals_path %>

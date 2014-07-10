@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Meal:</strong>
-  <%= link_to "#{@order.meal.date} - " + t("label." + @order.meal.meal_type), meal_path(@order.meal) %>
+  <strong><%= t('meal') %>:</strong>
+  <%= link_to "#{@order.meal.date} - " + t( @order.meal.meal_type), meal_path(@order.meal) %>
 </p>
 
 <p>
-  <strong>Dish:</strong>
+  <strong>t('dish'):</strong>
   <%= link_to @order.dish.name, dish_path(@order.dish) %>
 </p>
 
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>
+<%= link_to t('edit'), edit_order_path(@order) %> |
+<%= link_to t('back'), orders_path %>

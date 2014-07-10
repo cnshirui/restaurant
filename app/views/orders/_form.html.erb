@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :meal_id %><br>
-    <%= f.select :meal_id, Meal.order(:position).map { |m| [ "#{m.date} - " + t("label." + m.meal_type), m.id] } %>
+    <%= f.select :meal_id, Meal.order(:position).map { |m| [ "#{m.date} - " + t( m.meal_type), m.id] } %>
   </div>
 
   <div class="field">

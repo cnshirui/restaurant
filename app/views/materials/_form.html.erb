@@ -12,12 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label t('name') %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :balance %><br>
-    <%= f.text_field :balance %>
+    <%= f.label t :balance %><br>
+    <%= f.text_field :balance %> <%= t :g  %>
   </div>
   <div class="actions">
     <%= f.submit %>
