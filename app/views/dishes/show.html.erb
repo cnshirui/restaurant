@@ -27,13 +27,11 @@
     </thead>
 
     <tbody>
-      <% @dish.materials.each do |material| %>
+      <% @dish.burdens.each do |burden| %>
         <tr>
-          <td><%= material.name %></td>
-          <td><%= material.balance %> g</td>
-          <td><%= link_to t(t('show')), material %></td>
-          <td><%= link_to t('edit'), edit_material_path(material) %></td>
-          <td><%= link_to t(t('destroy')), material, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to burden.material.name, burden.material %></td>
+          <td><%= burden.material.balance %> g</td>
+          <td><%= link_to t(t('destroy')), burden, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>
