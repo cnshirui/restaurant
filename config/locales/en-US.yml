@@ -26,9 +26,9 @@ en-US:
   quantity: Quantity
   listing: Listing
   page: Page
-  login.name: Name
+  login_name: Name
   password: Password
-  please.login: Please Log In  
+  please_login: Please Log In  
   url: URL
   g: g
   label:

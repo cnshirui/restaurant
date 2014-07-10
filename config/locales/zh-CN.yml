@@ -26,9 +26,9 @@ zh-CN:
   quantity: 数量
   listing: 列表
   page: 页码
-  login.name: 登录名
+  login_name: 登录名
   password: 密码
-  please.login: 请登录
+  please_login: 请登录
   url: 网址
   g: 克
   label:
