@@ -17,6 +17,7 @@ class DishesController < ApplicationController
   # GET /dishes/new
   def new
     @dish = Dish.new
+    10.times { @dish.burdens.build }
   end
 
   # GET /dishes/1/edit

@@ -4,9 +4,9 @@
       <h2><%= pluralize(@dish.errors.count, "error") %> prohibited this dish from being saved:</h2>
 
       <ul>
-      <% @dish.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% @dish.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
@@ -23,6 +23,17 @@
     <%= f.label :page %><br>
     <%= f.text_field :page %>
   </div>
+
+  <div class="field">
+    <%= f.fields_for :burdens do |builder| %><br>
+    <p>
+      <%= builder.label :material_id, t('material')  %>
+      <%= builder.select :material_id, Material.all.map { |e| [e.name, e.id] } %>
+      <%= builder.text_field :quantity %> g
+    </p>    
+    <% end %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
