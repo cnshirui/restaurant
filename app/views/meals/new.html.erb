@@ -1,5 +1,5 @@
-<h1>New meal</h1>
+<h1><%= t('new') + t('meal') %></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', meals_path %>
+<%= link_to t('back'), meals_path %>

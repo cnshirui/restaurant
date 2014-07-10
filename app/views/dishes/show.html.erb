@@ -1,19 +1,44 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong><%= "#{t('name')}:" %></strong>
   <%= @dish.name %>
 </p>
 
 <p>
-  <strong>Book:</strong>
+  <strong><%= "#{t('book')}:" %></strong>
   <%= link_to @dish.book.name, book_path(@dish.book) %>
 </p>
 
 <p>
-  <strong>Page:</strong>
+  <strong><%= t('page') + ':' %></strong>
   <%= auto_link @dish.page, :html => { :target => '_blank' } %>
 </p>
 
-<%= link_to 'Edit', edit_dish_path(@dish) %> |
-<%= link_to 'Back', dishes_path %>
+<p>
+  <strong><%= t('material') %></strong>
+  <table>
+    <thead>
+      <tr>
+        <th><%= t('name') %></th>
+        <th><%= t('balance') %></th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @dish.materials.each do |material| %>
+        <tr>
+          <td><%= material.name %></td>
+          <td><%= material.balance %> g</td>
+          <td><%= link_to t(t('show')), material %></td>
+          <td><%= link_to t('edit'), edit_material_path(material) %></td>
+          <td><%= link_to t(t('destroy')), material, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</p>
+
+<%= link_to t('edit'), edit_dish_path(@dish) %> |
+<%= link_to t('back'), dishes_path %>

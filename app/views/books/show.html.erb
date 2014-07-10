@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong><%= "#{t('name')}:" %></strong>
   <%= @book.name %>
 </p>
 
@@ -10,5 +10,5 @@
   <%= auto_link @book.url, :html => { :target => '_blank' }  %>
 </p>
 
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+<%= link_to t('edit'), edit_book_path(@book) %> |
+<%= link_to t('back'), books_path %>

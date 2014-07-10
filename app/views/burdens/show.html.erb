@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Dish:</strong>
+  <strong>t('dish'):</strong>
   <%= @burden.dish.name %>
 </p>
 
@@ -15,5 +15,5 @@
   <%= @burden.quantity %> g
 </p>
 
-<%= link_to 'Edit', edit_burden_path(@burden) %> |
-<%= link_to 'Back', burdens_path %>
+<%= link_to t('edit'), edit_burden_path(@burden) %> |
+<%= link_to t('back'), burdens_path %>

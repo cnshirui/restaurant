@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong><%= "#{t('name')}:" %></strong>
   <%= @material.name %>
 </p>
 
@@ -10,5 +10,5 @@
   <%= @material.balance %>
 </p>
 
-<%= link_to 'Edit', edit_material_path(@material) %> |
-<%= link_to 'Back', materials_path %>
+<%= link_to t('edit'), edit_material_path(@material) %> |
+<%= link_to t('back'), materials_path %>

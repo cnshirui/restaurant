@@ -1,27 +1,38 @@
 en-US:
+  book: Book
+  dish: Dish
+  burden: Burden
+  material: Material
+  meal: Meal
+  order: Order
+  register: Register
+  profile: Profile
+  login: Login
+  logout: Logout
+  breakfast: Breakfast
+  lunch: Lunch
+  dinner: Dinner
+  name: Name
+  balance: Balance
+  new: New
+  create: Create
+  show: Show
+  edit: Edit
+  destroy: Destroy
+  up: Up
+  down: Down
+  type: Type
+  back: Back
+  quantity: Quantity
+  listing: Listing
+  page: Page
+  login.name: Name
+  password: Password
+  please.login: Please Log In  
+  url: URL
+  g: g
   label:
-    new: New
-    create: Create    
-    show: Show
-    edit: Edit
-    destroy: Destroy
-    up: Up
-    down: Down
     date: Date
-    type: Type
-    book: Book
-    dish: Dish
-    burden: Burden
-    material: Material
-    meal: Meal
-    order: Order
-    register: Register
-    profile: Profile  
-    login: Login
-    logout: Logout
-    breakfast: Breakfast
-    lunch: Lunch
-    dinner: Dinner
   date:
     abbr_day_names:
     - Sun
