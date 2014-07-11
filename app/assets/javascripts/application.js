@@ -17,5 +17,5 @@
 
 function remove_fields(link) {
     $(link).prev("input[type=hidden").value = 1;
-    $(link).parent().hide();
+    $(link).parent("p").hide();
 }

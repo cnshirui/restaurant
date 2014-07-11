@@ -31,8 +31,8 @@
       <%= builder.select :material_id, Material.all.map { |e| [e.name, e.id] } %>
       <%= builder.text_field :quantity %> g
       <%= f.hidden_field :destroy %>
-      <a onclick='remove_fields(this)' href="#"><%= t('destroy') %></a>
-      
+      <%= link_to t('destroy'), '#', :onclick => "remove_fields(this)" %>
+      <%= link_to t('destroy'), "#", :onclick => "$(this).parent().hide()" %>
     </p>    
     <% end %>
   </div>
