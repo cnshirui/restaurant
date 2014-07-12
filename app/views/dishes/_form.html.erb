@@ -15,27 +15,27 @@
     <%= f.label t('name') %><br>
     <%= f.text_field :name %>
   </div>
+
   <div class="field">
-    <%= f.label :book_id %><br>
+    <%= f.label t('book') %><br>
     <%= f.select :book_id, Book.all.map { |e| [e.name, e.id]} %>
   </div>
+
   <div class="field">
-    <%= f.label :page %><br>
+    <%= f.label t('page') %><br>
     <%= f.text_field :page %>
   </div>
 
   <div class="field">
     <%= f.fields_for :burdens do |builder| %>
-    <p>
-      <%= builder.label :material_id, t('material')  %>
-      <%= builder.select :material_id, Material.all.map { |e| [e.name, e.id] } %>
-      <%= builder.text_field :quantity %> g
-      <%= f.hidden_field :destroy %>
-      <%= link_to t('destroy'), '#', :onclick => "remove_fields(this)" %>
-      <%= link_to t('destroy'), "#", :onclick => "$(this).parent().hide()" %>
-    </p>    
+      <%= render 'burden_fields', :f => builder %>
     <% end %>
   </div>
+
+  <div>
+    <%= link_to_add_fields 'add burden', f, :burdens %>
+  </div>
+  <br/>
 
   <div class="actions">
     <%= f.submit %>
