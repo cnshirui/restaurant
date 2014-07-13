@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :shoppings
+
   controller :session do 
     get 'login' => :new
     post 'login' => :create

@@ -1,0 +1,31 @@
+<%= form_for(@shopping) do |f| %>
+  <% if @shopping.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@shopping.errors.count, "error") %> prohibited this shopping from being saved:</h2>
+
+      <ul>
+      <% @shopping.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label t('label.date') %><br>
+    <%= f.text_field :date %>
+  </div>
+
+  <% meal_index = 0 %>
+  <%= f.fields_for :shopping_meals do |builder| %>
+    <% meal = @meals[meal_index] %>
+    <%= builder.check_box :selected %>
+    <%= "#{meal.date} - " + t(meal.meal_type) %> 
+    <%= builder.hidden_field(:meal_id, :value => meal.id) %><br/>
+    <% meal_index += 1 %>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -16,6 +16,7 @@
   <td><%= link_to t('material'), '/materials' %></td>
   <td><%= link_to t('meal'), '/meals' %></td>
   <td><%= link_to t('order'), '/orders' %></td>
+  <td><%= link_to t('shopping'), '/shoppings' %></td>
   <% if session[:user_id] %>
     <td><%= link_to t('profile'), user_path(session[:user_id]) %></td>
     <td><%= link_to t('logout'), logout_path, method: :delete %></td>

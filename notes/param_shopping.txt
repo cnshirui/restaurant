@@ -1,0 +1,8 @@
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EF2h5Rp1OfcE1coivi6i4GE11OgIxJfo/i24FR83Fks=", "shopping"=>{"date"=>"", "shopping_meals_attributes"=>{"0"=>{"selected"=>"1"}, "1"=>{"selected"=>"0"}, "2"=>{"selected"=>"0"}, "3"=>{"selected"=>"0"}, "4"=>{"selected"=>"0"}, "5"=>{"selected"=>"0"}, "6"
+=>{"selected"=>"0"}, "7"=>{"selected"=>"0"}, "8"=>{"selected"=>"0"}, "9"=>{"selected"=>"0"}, "10"=>{"selected"=>"0"}, "11"=>{"selected"=>"0"}, "12"=>{"selected"=>"0"}, "13"=>{"selected"=>"0"}, "14"=>{"selected"=>"0"}, "15"=>{"selected"=>"0"}, "16"=>{"selected"=>"0"}, "17"=>{"selected"=>"0"}, "18"=>{
+"selected"=>"0"}, "19"=>{"selected"=>"0"}, "20"=>{"selected"=>"0"}}}, "commit"=>"新增Shopping"}
+
+
+99999999991
+{"date"=>"", "shopping_meals_attributes"=>{"0"=>{"selected"=>"1"}, "1"=>{"selected"=>"0"}, "2"=>{"selected"=>"0"}, "3"=>{"selected"=>"0"}, "4"=>{"selected"=>"0"}, "5"=>{"selected"=>"0"}, "6"=>{"selected"=>"0"}, "7"=>{"selected"=>"0"}, "8"=>{"selected"=>"0"}, "9"=>{"selected"=>"0"}, "10"=>{"selected"
+=>"0"}, "11"=>{"selected"=>"0"}, "12"=>{"selected"=>"0"}, "13"=>{"selected"=>"0"}, "14"=>{"selected"=>"0"}, "15"=>{"selected"=>"0"}, "16"=>{"selected"=>"0"}, "17"=>{"selected"=>"0"}, "18"=>{"selected"=>"0"}, "19"=>{"selected"=>"0"}, "20"=>{"selected"=>"0"}}}

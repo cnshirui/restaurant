@@ -1,0 +1,5 @@
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EF2h5Rp1OfcE1coivi6i4GE11OgIxJfo/i24FR83Fks=", "dish"=>{"name"=>"aaa", "book_id"=>"1", "page"=>"", "burdens_attributes"=>{"0"=>{"material_id"=>"32", "quantity"=>"1", "destroy"=>"#<Burden:0x00000007d9dd00>"}, "1"=>{"material_id"=>"45", "quantity"=>""
+, "destroy"=>"#<Burden:0x00000007e0cae8>"}, "2"=>{"material_id"=>"45", "quantity"=>"", "destroy"=>"#<Burden:0x00000007e15fd0>"}, "3"=>{"material_id"=>"45", "quantity"=>"", "destroy"=>"#<Burden:0x00000007e1f788>"}, "4"=>{"material_id"=>"45", "quantity"=>"", "destroy"=>"#<Burden:0x00000007e2fef8>"}}},
+ "commit"=>"新增Dish"}
+99999999999993
+{"name"=>"aaa", "book_id"=>"1", "page"=>"", "burdens_attributes"=>{"0"=>{"material_id"=>"32", "quantity"=>"1"}, "1"=>{"material_id"=>"45", "quantity"=>""}, "2"=>{"material_id"=>"45", "quantity"=>""}, "3"=>{"material_id"=>"45", "quantity"=>""}, "4"=>{"material_id"=>"45", "quantity"=>""}}}
