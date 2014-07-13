@@ -4,7 +4,7 @@ class MaterialsController < ApplicationController
   # GET /materials
   # GET /materials.json
   def index
-    @materials = Material.all
+    @materials = Material.all.sort_by { |material| HanziToPinyin.hanzi_2_py(material.name) }
   end
 
   # GET /materials/1

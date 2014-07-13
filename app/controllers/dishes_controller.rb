@@ -1,12 +1,10 @@
-require 'rails_autolink'
-
 class DishesController < ApplicationController
   before_action :set_dish, only: [:show, :edit, :update, :destroy]
 
   # GET /dishes
   # GET /dishes.json
   def index
-    @dishes = Dish.all
+    @dishes = Dish.all.sort_by { |dish|  HanziToPinyin.hanzi_2_py(dish.name) }
   end
 
   # GET /dishes/1
@@ -17,11 +15,13 @@ class DishesController < ApplicationController
   # GET /dishes/new
   def new
     @dish = Dish.new
+    @materials = Material.all.sort_by { |material| HanziToPinyin.hanzi_2_py(material.name) }
     5.times { @dish.burdens.build }
   end
 
   # GET /dishes/1/edit
   def edit
+    @materials = Material.all.sort_by { |material| HanziToPinyin.hanzi_2_py(material.name) }
     5.times { @dish.burdens.build }
   end
 

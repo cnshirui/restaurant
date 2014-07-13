@@ -1,6 +1,6 @@
 <div class="fields">
   <%= f.label :material_id, t('material')  %>
-  <%= f.select :material_id, Material.all.map { |e| [e.name, e.id] } %>
+  <%= f.select :material_id, @materials.map { |e| [e.name, e.id] } %>
   <%= f.text_field :quantity %> g
   <%= f.hidden_field :destroy %>
   <%= link_to t('destroy'), '#', :onclick => "remove_fields(this)" %>
