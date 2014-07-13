@@ -30,7 +30,7 @@
       <% @dish.burdens.each do |burden| %>
         <tr>
           <td><%= link_to burden.material.name, burden.material %></td>
-          <td><%= burden.material.balance %> g</td>
+          <td><%= burden.quantity %> g</td>
           <td><%= link_to t(t('destroy')), burden, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>

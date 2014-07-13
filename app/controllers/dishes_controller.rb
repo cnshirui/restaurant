@@ -17,11 +17,12 @@ class DishesController < ApplicationController
   # GET /dishes/new
   def new
     @dish = Dish.new
-    3.times { @dish.burdens.build }
+    5.times { @dish.burdens.build }
   end
 
   # GET /dishes/1/edit
   def edit
+    5.times { @dish.burdens.build }
   end
 
   # POST /dishes
@@ -45,8 +46,10 @@ class DishesController < ApplicationController
   def update
     respond_to do |format|
       # Unpermitted parameters: page
-      puts "*************", dish_params
       if @dish.update(dish_params)
+        @dish.burdens.each do |burden|
+          @dish.burdens.delete(burden) if burden.quantity == nil or burden.quantity == 0
+        end  
         format.html { redirect_to @dish, notice: 'Dish was successfully updated.' }
         format.json { render :show, status: :ok, location: @dish }
       else
@@ -74,6 +77,10 @@ class DishesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def dish_params
-      params.require(:dish).permit(:name, :book_id, :page)
+      params.require(:dish).permit(:name, :book_id, :page, burdens_attributes: [:material_id, :quantity])
+    end
+    
+    def burden_params
+      params.require(:burden)
     end
 end
