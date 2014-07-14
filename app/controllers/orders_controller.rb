@@ -4,7 +4,14 @@ class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
   def index
+    @meals = {} # Hash.new(Hash.new([]))
     @orders = Order.all.sort_by { |o| o.meal.position }
+    @orders.each do |order|
+      meal = order.meal
+      @meals[meal.date] = {} unless @meals.has_key?(meal.date)
+      @meals[meal.date][meal.meal_type] = [] unless @meals[meal.date].has_key?(meal.meal_type)
+      @meals[meal.date][meal.meal_type] << order.dish
+    end
   end
 
   # GET /orders/1
