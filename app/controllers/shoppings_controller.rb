@@ -22,7 +22,6 @@ class ShoppingsController < ApplicationController
   # GET /shoppings/1/edit
   def edit
     @meals = Meal.all
-    #TODO-fix: remove duplicate when edit and save
   end
 
   # POST /shoppings
@@ -44,13 +43,11 @@ class ShoppingsController < ApplicationController
   # PATCH/PUT /shoppings/1
   # PATCH/PUT /shoppings/1.json
   def update
+    # fix: remove duplicate when edit and save
+    @shopping.shopping_meals.delete :all
+    
     respond_to do |format|
       if @shopping.update(shopping_params)
-        
-        # filter
-#        @shopping.shopping_meals.each do |sm|
-#          @shopping.shopping_meals.delete(sm) if sm.selected = 0
-#        end
         
         format.html { redirect_to @shopping, notice: 'Shopping was successfully updated.' }
         format.json { render :show, status: :ok, location: @shopping }

@@ -79,8 +79,4 @@ class DishesController < ApplicationController
     def dish_params
       params.require(:dish).permit(:name, :book_id, :page, burdens_attributes: [:material_id, :quantity])
     end
-    
-    def burden_params
-      params.require(:burden)
-    end
 end
