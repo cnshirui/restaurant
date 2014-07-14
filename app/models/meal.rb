@@ -3,9 +3,7 @@ require 'acts_as_list'
 class Meal < ActiveRecord::Base
   acts_as_list
   has_many :orders, :dependent => :destroy
-  
-  has_many :burdens
-  has_and_belongs_to_many :material, join_table: :burdens
+  has_and_belongs_to_many :dishes, join_table: :orders
   
   default_scope { order 'position' }
   

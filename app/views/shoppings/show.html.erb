@@ -8,11 +8,39 @@
 <p>
   <strong><%= t('meal') %>:</strong><br/>
   <% @shopping.shopping_meals.each do |sm| %>
-    <% if sm.selected == true %>
-      <%= sm.meal.date + " - " + t(sm.meal.meal_type) %><br/>
+    <% next if not sm.selected %>
+    <%= link_to sm.meal.date + " - " + t(sm.meal.meal_type), sm.meal %>: <span/>
+    <% sm.meal.dishes.each do |dish| %>
+      <%= link_to dish.name, dish  %><span/>
     <% end %>
+    <br/>
   <% end %>
 </p>
+
+<p>
+  <strong><%= t('material') %>:</strong>
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= t('material') %></th>
+      <th><%= t('quantity') %></th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @materials.each do |name, quantity| %>
+      <tr>
+        <%  %>
+        <td><%= name %></td>
+        <td><%= quantity/1000 %> kg</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br/>
 
 <%= link_to 'Edit', edit_shopping_path(@shopping) %> |
 <%= link_to 'Back', shoppings_path %>

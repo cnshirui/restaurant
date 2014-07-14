@@ -10,6 +10,17 @@ class ShoppingsController < ApplicationController
   # GET /shoppings/1
   # GET /shoppings/1.json
   def show
+    @materials = Hash.new(0)
+    
+    @shopping.shopping_meals.each do |sm|
+      next if not sm.selected 
+      sm.meal.dishes.each do |dish|
+        dish.burdens.each do |burden|
+          material = burden.material
+          @materials[material.name] += burden.quantity        
+        end
+      end
+    end
   end
 
   # GET /shoppings/new

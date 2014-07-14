@@ -3,8 +3,8 @@
 <table>
   <thead>
     <tr>
+      <th><%= t('dish') %></th>      
       <th><%= t('material') %></th>
-      <th><%= t('dish') %></th>
       <th><%= t('quantity') %></th>
       <th colspan="3"></th>
     </tr>
@@ -15,8 +15,8 @@
       <tr>
         <!-- % puts "***********", burden.inspect %-->
         <%  %>
-        <td><%= link_to burden.material.name, material_path(burden.material) if burden.material %></td>
         <td><%= link_to burden.dish.name, dish_path(burden.dish) if burden.dish %></td>
+        <td><%= link_to burden.material.name, material_path(burden.material) if burden.material %></td>
         <td><%= burden.quantity %> g</td>
         <td><%= link_to t('show'), burden %></td>
         <td><%= link_to t('edit'), edit_burden_path(burden) %></td>
