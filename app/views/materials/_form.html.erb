@@ -12,13 +12,20 @@
   <% end %>
 
   <div class="field">
+    <%= f.label t('category') %><br>
+    <%= f.select :category, Material::CATEGORIES.map { |category| t(category) } %>
+  </div>
+
+  <div class="field">
     <%= f.label t('name') %><br>
     <%= f.text_field :name %>
   </div>
+
   <div class="field">
     <%= f.label t :balance %><br>
     <%= f.text_field :balance %> <%= t :g  %>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -24,6 +24,7 @@
 <table>
   <thead>
     <tr>
+      <th><%= t('category') %></th>
       <th><%= t('material') %></th>
       <th><%= t('quantity') %></th>
       <th colspan="2"></th>
@@ -31,11 +32,12 @@
   </thead>
 
   <tbody>
-    <% @materials.each do |name, quantity| %>
+    <% @materials.keys.sort_by { |material| material.category ? material.category : '' + HanziToPinyin.hanzi_2_py(material.name) }.each do |material| %>
       <tr>
         <%  %>
-        <td><%= name %></td>
-        <td><%= quantity/1000 %> kg</td>
+        <td><%= t(material.category) if material.category %></td>
+        <td><%= material.name %></td>
+        <td><%= @materials[material]/1000 %> kg</td>
       </tr>
     <% end %>
   </tbody>

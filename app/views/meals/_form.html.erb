@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label t('type') %><br>
-    <%= f.select :meal_type, Meal::MEAL_TYPES.map { |e| [ t("#{e}"), e] }, promot: 'Select a meal' %>
+    <%= f.select :meal_type, Meal::TYPES.map { |e| [ t("#{e}"), e] }, promot: 'Select a meal' %>
   </div>
   <div class="actions">
     <%= f.submit %>

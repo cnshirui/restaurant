@@ -32,6 +32,10 @@ zh-CN:
   url: 网址
   g: 克
   shopping: 买菜
+  category: 种类
+  vegetable: 蔬菜 
+  meat: 荤菜
+  flavour: 调料
   label:
     date: 日期
   date:

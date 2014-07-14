@@ -1,7 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong><%= "#{t('name')}:" %></strong>
+  <strong><%= t('category') %>:</strong>
+  <%= t(@material.category) if @material.category %>
+</p>
+<p>
+  <strong><%= t('name') %>:</strong>
   <%= @material.name %>
 </p>
 

@@ -7,7 +7,7 @@ class Meal < ActiveRecord::Base
   
   default_scope { order 'position' }
   
-  MEAL_TYPES = ['breakfast', "lunch", "dinner"]
+  TYPES = ['breakfast', "lunch", "dinner"]
   
 end
 

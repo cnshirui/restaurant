@@ -17,7 +17,7 @@ class ShoppingsController < ApplicationController
       sm.meal.dishes.each do |dish|
         dish.burdens.each do |burden|
           material = burden.material
-          @materials[material.name] += burden.quantity        
+          @materials[material] += burden.quantity        
         end
       end
     end

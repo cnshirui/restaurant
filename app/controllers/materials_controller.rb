@@ -4,7 +4,7 @@ class MaterialsController < ApplicationController
   # GET /materials
   # GET /materials.json
   def index
-    @materials = Material.all.sort_by { |material| HanziToPinyin.hanzi_2_py(material.name) }
+    @materials = Material.all.sort_by { |material| material.category ? material.category : '' + HanziToPinyin.hanzi_2_py(material.name) }
   end
 
   # GET /materials/1
@@ -69,6 +69,6 @@ class MaterialsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def material_params
-      params.require(:material).permit(:name, :balance)
+      params.require(:material).permit(:category, :name, :balance)
     end
 end

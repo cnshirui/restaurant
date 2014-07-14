@@ -32,6 +32,10 @@ en-US:
   url: URL
   g: g
   shopping: Shopping
+  category: category
+  vegetable: Vegetable 
+  meat: Meat
+  flavour: Flavour  
   label:
     date: Date
   date:
