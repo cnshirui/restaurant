@@ -1,14 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'sessions/new'
-
-  get 'sessions/create'
-
-  get 'sessions/destroy'
-
   resources :shoppings
 
-  controller :session do 
+  controller :sessions do 
     get 'login' => :new
     post 'login' => :create
     delete 'logout' => :destroy
@@ -18,9 +12,9 @@ Rails.application.routes.draw do
     get 'register' => :new
   end
   
-  get 'session/new'
-  get 'session/create'
-  get 'session/destroy'  
+  get 'sessions/new'
+  get 'sessions/create'
+  get 'sessions/destroy'  
 
   resources :users
 
