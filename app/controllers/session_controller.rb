@@ -1,4 +1,5 @@
 class SessionController < ApplicationController
+  force_ssl if: :ssl_configured?
   skip_before_action :authorize # , only: [ :new ]
   
   def new

@@ -12,4 +12,8 @@ class ApplicationController < ActionController::Base
       redirect_to login_url, notice: 'Please login'
     end
   end
+  
+  def ssl_configured?
+    not Rails.env.development?
+  end
 end
