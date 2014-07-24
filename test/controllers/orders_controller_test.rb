@@ -1,8 +1,15 @@
 require 'test_helper'
 
 class OrdersControllerTest < ActionController::TestCase
+  fixtures :users
+  
   setup do
     @order = orders(:one)
+    # puts @order.inspect
+    user = users(:one)
+    # post '/login', :name => user.name, :password => 'secret'
+    @request = ActionController::TestRequest.new
+    @request.session[:user_id] = user.id
   end
 
   test "should get index" do

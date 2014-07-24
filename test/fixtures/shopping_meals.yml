@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  shopping: 
-  meal: 
+  id: 1
+  shopping: 1
+  meal: 1
 
 two:
-  shopping: 
-  meal: 
+  id: 2
+  shopping: 2
+  meal: 2

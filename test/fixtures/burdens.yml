@@ -1,11 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  material_id: 
-  dish_id: 
-  quantity: 
+  id: 1
+  material_id: 1
+  dish_id: 1
+  quantity: 1
 
 two:
-  material_id: 
-  dish_id: 
-  quantity: 
+  id: 2
+  material_id: 2
+  dish_id: 2
+  quantity: 2

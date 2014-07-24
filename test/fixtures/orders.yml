@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  dish_id: 
-  meal_id: 
+  id: 1
+  dish_id: 1
+  meal_id: 1
 
 two:
-  dish_id: 
-  meal_id: 
+  id: 2
+  dish_id: 2
+  meal_id: 2
