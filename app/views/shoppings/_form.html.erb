@@ -1,4 +1,4 @@
-<%= form_for(@shopping) do |f| %>
+<%= form_for @shopping, :html => { :class => 'form-horizontal' } do |f| %>
   <% if @shopping.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@shopping.errors.count, "error") %> prohibited this shopping from being saved:</h2>
@@ -10,11 +10,11 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label t('label.date') %><br>
-    <%= f.date_field :date %>
-  </div>
+  <div class="control-group">
+    <%= f.label t('label.date'), :class => 'control-label' %>
+    <div class="controls">
+      <%= f.date_field :date, :class => 'date_field' %>
+    </div>
 
   <% meal_index = 0 %>
   <%= f.fields_for :shopping_meals do |builder| %>
@@ -25,7 +25,9 @@
     <% meal_index += 1 %>
   <% end %>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                shoppings_path, :class => 'btn' %>
   </div>
 <% end %>

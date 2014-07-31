@@ -1,9 +1,12 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Shopping -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => t('shopping') %></h1>
+</div>
 
-<p>
-  <strong><%= t('label.date') %>:</strong>
-  <%= @shopping.date %>
-</p>
+<dl class="dl-horizontal">
+  <dt><strong><%= t('label.date') %>:</strong></dt>
+  <dd><%= @shopping.date %></dd>
+</dl>
 
 <p>
   <strong><%= t('meal') %>:</strong><br/>
@@ -44,5 +47,14 @@
 </table>
 <br/>
 
-<%= link_to 'Edit', edit_shopping_path(@shopping) %> |
-<%= link_to 'Back', shoppings_path %>
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              shoppings_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_shopping_path(@shopping), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              shopping_path(@shopping),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>

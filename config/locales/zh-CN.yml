@@ -175,12 +175,18 @@ zh-CN:
         one: 有 1 个错误发生导致「%{model}」无法被保存。
         other: 有 %{count} 个错误发生导致「%{model}」无法被保存。
   helpers:
+    actions: 操作
     select:
       prompt: 请选择
     submit:
       create: 新增%{model}
       submit: 储存%{model}
       update: 更新%{model}
+    links:
+      new: 新建
+      back: 返回  
+      edit: 编辑
+      destroy: 删除 
   number:
     currency:
       format:
